@@ -1,0 +1,65 @@
+/*! Lyas v1.0.0 | MIT License | https://github.com/VeronQ/lyas */
+
+
+// Breakpoints listing
+// ==============================
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+) !default;
+
+
+$lyas: ();
+
+
+// Store CSS variables
+// ==============================
+
+@mixin var-mq(
+  $custom-property,
+  $default,
+  $sm: null,
+  $md: null,
+  $lg: null,
+  $xl: null
+) {
+
+  $values: ();
+  @each $val in $default, $sm, $md, $lg, $xl {
+    $values: append($values, $val);
+  }
+
+  $lyas: map-merge($lyas, ($custom-property: $values)) !global;
+}
+
+
+// Init CSS variables
+// ==============================
+
+@mixin init-lyas {
+
+  // Default value
+  :root {
+    @each $el, $list in $lyas {
+      #{$el}: nth($list, 1);
+    }
+  }
+
+  // Breakpoints values
+  @each $device, $width in $breakpoints {
+    $i: (index($breakpoints, $device $width) + 1);
+
+    @media screen and (min-width: $width) {
+      :root {
+        @each $el, $list in $lyas {
+          @if (nth($list, $i)) {
+            #{$el}: nth($list, $i);
+          }
+        }
+      }
+    }
+  }
+}

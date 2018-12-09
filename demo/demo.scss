@@ -1,0 +1,20 @@
+// 1. Import lyas.scss into your file
+@import 'lyas';
+
+
+// 2. Define your CSS variables
+@include var-mq('--text-color',
+  $default: red,
+  $md: blue,
+  $lg: green
+);
+
+
+// 3. Use your defined variables
+.foo {
+  color: var(--text-color);
+}
+
+
+// 4. Last, initialize all variables
+@include init-lyas;
