@@ -2,8 +2,8 @@
 
 > An elegant way to define your CSS variables in all their forms
 
+[![npm version](https://badge.fury.io/js/lyas.svg)](https://npmjs.org/package/lyas "View this project on npm")
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/VeronQ/lyas/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/veronQ/lyas/graphs/commit-activity)
 
 **Version** [v1.0.5](https://github.com/VeronQ/lyas/releases)
 
