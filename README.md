@@ -5,8 +5,6 @@
 [![npm version](https://badge.fury.io/js/lyas.svg)](https://npmjs.org/package/lyas "View this project on npm")
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/VeronQ/lyas/blob/master/LICENSE)
 
-**Version** [v1.0.5](https://github.com/VeronQ/lyas/releases)
-
 Lyas is a Sass-based library which provide an alternative solution to define your CSS variables and their values depending of the current device-width.
 
 ## Installation
